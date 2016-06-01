@@ -1,0 +1,86 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{085BDE3A-95DF-4EBF-8CCF-5D846B54369F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8777535E-61B9-45E1-9309-44469D3E738C}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JetRx.Api", "JetRx.Api\JetRx.Api.csproj", "{A247A458-8296-4BB9-8657-F30F1693B545}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JetRx.Api.Tests", "JetRx.Api.Tests\JetRx.Api.Tests.csproj", "{CD087C15-20C9-4447-8C93-0B88046F84D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JetRx.Common", "JetRx.Common\JetRx.Common.csproj", "{EBC715BD-38F3-42AC-8E8C-7602205DD366}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JetRx.Portal", "JetRx.Portal\JetRx.Portal.csproj", "{97CA3FAE-F474-4B1D-A925-414F1F6923F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JetRx.Portal.Tests", "JetRx.Portal.Tests\JetRx.Portal.Tests.csproj", "{682785DB-6E62-41A2-A2B4-713751DBF594}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A247A458-8296-4BB9-8657-F30F1693B545}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A247A458-8296-4BB9-8657-F30F1693B545}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A247A458-8296-4BB9-8657-F30F1693B545}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A247A458-8296-4BB9-8657-F30F1693B545}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD087C15-20C9-4447-8C93-0B88046F84D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD087C15-20C9-4447-8C93-0B88046F84D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD087C15-20C9-4447-8C93-0B88046F84D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD087C15-20C9-4447-8C93-0B88046F84D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBC715BD-38F3-42AC-8E8C-7602205DD366}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBC715BD-38F3-42AC-8E8C-7602205DD366}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBC715BD-38F3-42AC-8E8C-7602205DD366}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBC715BD-38F3-42AC-8E8C-7602205DD366}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97CA3FAE-F474-4B1D-A925-414F1F6923F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97CA3FAE-F474-4B1D-A925-414F1F6923F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97CA3FAE-F474-4B1D-A925-414F1F6923F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97CA3FAE-F474-4B1D-A925-414F1F6923F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{682785DB-6E62-41A2-A2B4-713751DBF594}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{682785DB-6E62-41A2-A2B4-713751DBF594}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{682785DB-6E62-41A2-A2B4-713751DBF594}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{682785DB-6E62-41A2-A2B4-713751DBF594}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A247A458-8296-4BB9-8657-F30F1693B545} = {085BDE3A-95DF-4EBF-8CCF-5D846B54369F}
+		{CD087C15-20C9-4447-8C93-0B88046F84D1} = {085BDE3A-95DF-4EBF-8CCF-5D846B54369F}
+		{EBC715BD-38F3-42AC-8E8C-7602205DD366} = {085BDE3A-95DF-4EBF-8CCF-5D846B54369F}
+		{97CA3FAE-F474-4B1D-A925-414F1F6923F4} = {085BDE3A-95DF-4EBF-8CCF-5D846B54369F}
+		{682785DB-6E62-41A2-A2B4-713751DBF594} = {085BDE3A-95DF-4EBF-8CCF-5D846B54369F}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://icit.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = JetRx.Api.Tests\\JetRx.Api.Tests.csproj
+		SccProjectTopLevelParentUniqueName1 = JetRx.sln
+		SccProjectName1 = JetRx.Api.Tests
+		SccLocalPath1 = JetRx.Api.Tests
+		SccProjectUniqueName2 = JetRx.Api\\JetRx.Api.csproj
+		SccProjectTopLevelParentUniqueName2 = JetRx.sln
+		SccProjectName2 = JetRx.Api
+		SccLocalPath2 = JetRx.Api
+		SccProjectUniqueName3 = JetRx.Common\\JetRx.Common.csproj
+		SccProjectTopLevelParentUniqueName3 = JetRx.sln
+		SccProjectName3 = JetRx.Common
+		SccLocalPath3 = JetRx.Common
+		SccProjectUniqueName4 = JetRx.Portal.Tests\\JetRx.Portal.Tests.csproj
+		SccProjectTopLevelParentUniqueName4 = JetRx.sln
+		SccProjectName4 = JetRx.Portal.Tests
+		SccLocalPath4 = JetRx.Portal.Tests
+		SccProjectUniqueName5 = JetRx.Portal\\JetRx.Portal.csproj
+		SccProjectTopLevelParentUniqueName5 = JetRx.sln
+		SccProjectName5 = JetRx.Portal
+		SccLocalPath5 = JetRx.Portal
+	EndGlobalSection
+EndGlobal

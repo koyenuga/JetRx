@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\aspnet-JetRx.Api-20160419080618.mdf;Initial Catalog=aspnet-JetRx.Api-20160419080618;Integrated Security=True;User Instance=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Projects\\JetRx\\JetRx\\JetRx\.Api\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="JetRxDbContext-Web.config Connection String" description="JetRxDbContext Connection String used in web.config by the application to access the database." defaultValue="Server=tcp:il9qwpatq2.database.windows.net,1433;Database=JetRxDB;User ID=JetRxApp@il9qwpatq2;Password=J37rx&amp;2016@$;Trusted_Connection=False;Encrypt=True;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Projects\\JetRx\\JetRx\\JetRx\.Api\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='JetRxDbContext']/@connectionString" />
+  </parameter>
+  <parameter name="JetRxAzureDocumentStorage-Web.config Connection String" description="JetRxAzureDocumentStorage Connection String used in web.config by the application to access the database." defaultValue="DefaultEndpointsProtocol=https;AccountName=jetrx;AccountKey=Je0MueMYzFDRrQ+Z+3+WnI84JTbCL5MGiYltSTUb5CgCSJzJSSUAnEGXez5tVQUfQfgl+HDHONwZy+ocFMC6gg==" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Projects\\JetRx\\JetRx\\JetRx\.Api\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='JetRxAzureDocumentStorage']/@connectionString" />
+  </parameter>
+  <parameter name="JetRxConfig-Web.config Connection String" description="JetRxConfig Connection String used in web.config by the application to access the database." defaultValue="DefaultEndpointsProtocol=https;AccountName=jetrxconfig;AccountKey=EKvotJ7qmyqpXuH6gLiFXEF9wzIW7mW6naMxfJYGHeyjz3Xe+VYghbzX/W7Ae0lboMfQ1+CEF9GtwYl+D5l8lw==" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Projects\\JetRx\\JetRx\\JetRx\.Api\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='JetRxConfig']/@connectionString" />
+  </parameter>
+</parameters>

@@ -1,0 +1,12 @@
+C:\Projects\JetRx\JetRx\JetRx.DataAccess\bin\Debug\JetRx.DataAccess.dll.config
+C:\Projects\JetRx\JetRx\JetRx.DataAccess\bin\Debug\JetRx.DataAccess.dll
+C:\Projects\JetRx\JetRx\JetRx.DataAccess\bin\Debug\JetRx.DataAccess.pdb
+C:\Projects\JetRx\JetRx\JetRx.DataAccess\bin\Debug\EntityFramework.dll
+C:\Projects\JetRx\JetRx\JetRx.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Projects\JetRx\JetRx\JetRx.DataAccess\bin\Debug\JetRx.Common.dll
+C:\Projects\JetRx\JetRx\JetRx.DataAccess\bin\Debug\JetRx.Common.pdb
+C:\Projects\JetRx\JetRx\JetRx.DataAccess\bin\Debug\EntityFramework.xml
+C:\Projects\JetRx\JetRx\JetRx.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Projects\JetRx\JetRx\JetRx.DataAccess\obj\Debug\JetRx.DataAccess.csprojResolveAssemblyReference.cache
+C:\Projects\JetRx\JetRx\JetRx.DataAccess\obj\Debug\JetRx.DataAccess.dll
+C:\Projects\JetRx\JetRx\JetRx.DataAccess\obj\Debug\JetRx.DataAccess.pdb

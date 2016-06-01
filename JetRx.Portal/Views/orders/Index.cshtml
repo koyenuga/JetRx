@@ -1,0 +1,94 @@
+﻿@model IEnumerable<JetRx.Entities.order>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            ID
+        </th>
+       
+        <th>
+           Prescription Type
+        </th>
+        <th>
+            Customer First Name
+        </th>
+        <th>
+            Customer Last Name
+        </th>
+        <th>
+            Customer Phone
+        </th>
+        <th>
+            Customer Email
+        </th>
+        <th>
+            Order Date
+        </th>
+        <th>
+            Status
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
+          
+            <td>
+                @Html.DisplayFor(modelItem => item.customer_prescription.Prescription.prescription_type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.customer_prescription.Customer.firstname)
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.customer_prescription.Customer.lastname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.customer_prescription.Customer.phone_number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.customer_prescription.Customer.email)
+            </td>
+         
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.id })
+            </td>
+        </tr>
+    }
+
+</table>
+<!-- Modal -->
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width:800px;">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    </div>
+    <div class="modal-body">
+        <img src="/images/brackets/6teamDouble1.jpg">
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    </div>
+</div>
+
+<script>
+    $('a').click(function (e) {
+        $('#myModal img').attr('src', $(this).attr('data-img-url'));
+    });
+</script>

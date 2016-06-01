@@ -1,0 +1,155 @@
+@using System.Web.Http
+@using System.Web.Http.Description
+@using JetRx.Api.Areas.HelpPage.Models
+@using JetRx.Api.Areas.HelpPage.ModelDescriptions
+@model HelpPageApiModel
+
+@{
+    ApiDescription description = Model.ApiDescription;
+}
+<h1>@description.HttpMethod.Method @description.RelativePath</h1>
+<div>
+    <p>@description.Documentation</p>
+
+    @if (Model.RequiresAuthorization)
+    {
+        <h2><strong>Requires Authorization</strong></h2>
+
+        <table class="help-page-table">
+            <thead>
+                <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+            </thead>
+            <tbody>
+                    <tr>
+                        <td class="parameter-name">x-jetrx-app-key</td>
+                        <td class="parameter-documentation">
+                            This is the Unique Key assigned to the application. This Key must be provided everytime the applications make a request.
+                        </td>
+                        <td class="parameter-type">
+                            <p> Application Key</p>
+                        </td>
+                        <td class="parameter-annotations">
+                            Required
+                        </td>
+                    </tr>
+                @if (Model.MustHaveDeviceKey)
+                {
+                    <tr>
+                        <td class="parameter-name">x-jetrx-device-key</td>
+                        <td class="parameter-documentation">
+                            This is the Unique Key assigned to the Device. This Key is generated the first time the device is registered and must persist
+                            on the device to make subsequent Requests.
+                        </td>
+                        <td class="parameter-type">
+                            <p> Device Key</p>
+                        </td>
+                        <td class="parameter-annotations">
+                            Required
+                        </td>
+                    </tr>
+                }
+                @if (Model.MustHaveAccessKey)
+                {
+                    <tr>
+                        <td class="parameter-name">x-jetrx-access-key</td>
+                        <td class="parameter-documentation">
+                           
+                            This is the Unique Key assigned to the Device. This Key is generated the first time the device is registered and must persist
+                            on the device to make subsequent Requests.
+                        </td>
+                        <td class="parameter-type">
+                            <p> Access Key</p>
+                        </td>
+                        <td class="parameter-annotations">
+                            Required
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+
+   
+
+    
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+    @Html.DisplayFor(m => m.UriParameters, "Parameters")
+
+    <h3> Required Parameters</h3>
+    <p>HttpStatus Code 400 (BadRequest) will be returned if this field(s) are not provided</p>
+    <ul>
+        @if ((Model.RequiredFields != null) && Model.RequiredFields.Count() > 0)
+        {
+            foreach (var field in Model.RequiredFields)
+            {
+                <li>@field</li>
+            }
+        }
+        else
+        {
+            <li>None.</li>
+        }
+    </ul>
+
+    <h3>Body Parameters</h3>
+
+    <p>@Model.RequestDocumentation</p>
+
+    @if (Model.RequestModelDescription != null)
+    {
+        @Html.DisplayFor(m => m.RequestModelDescription.ModelType, "ModelDescriptionLink", new { modelDescription = Model.RequestModelDescription })
+        if (Model.RequestBodyParameters != null)
+        {
+            @Html.DisplayFor(m => m.RequestBodyParameters, "Parameters")
+        }
+    }
+    else
+    {
+        <p>None.</p>
+    }
+
+    @if (Model.SampleRequests.Count > 0)
+    {
+        <h3>Request Formats</h3>
+        @Html.DisplayFor(m => m.SampleRequests, "Samples")
+    }
+
+    <h2>Response Information</h2>
+
+    @if (Model.ResponseCodes != null)
+    {
+        <h3>Response Codes</h3>
+        <ul>
+            @foreach (var code in Model.ResponseCodes)
+            {
+                <li>@code (@((int)code))</li>
+            }
+        </ul>
+    }
+
+    <h3>Resource Description</h3>
+
+    <p>@description.ResponseDescription.Documentation</p>
+
+    @if (Model.ResourceDescription != null)
+    {
+        @Html.DisplayFor(m => m.ResourceDescription.ModelType, "ModelDescriptionLink", new { modelDescription = Model.ResourceDescription })
+        if (Model.ResourceProperties != null)
+        {
+            @Html.DisplayFor(m => m.ResourceProperties, "Parameters")
+        }
+    }
+    else
+    {
+        <p>None.</p>
+    }
+
+    @if (Model.SampleResponses.Count > 0)
+    {
+        <h3>Response Formats</h3>
+        @Html.DisplayFor(m => m.SampleResponses, "Samples")
+    }
+
+</div>
